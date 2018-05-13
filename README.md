@@ -25,7 +25,7 @@ As for more hyperparameters in XGBoost model, you can modify them in the `src/mo
 
 ## Code & Data
 ### `src/` directory
-.
+`.
 ├── Construct_DataSet.py
 ├── Model.py
 ├── README.md
@@ -37,14 +37,14 @@ As for more hyperparameters in XGBoost model, you can modify them in the `src/mo
 ├── test.pyc
 ├── totalPipeline.py
 ├── tuning_xgboost.py
-└── tuning_xgboost.pyc
+└── tuning_xgboost.pyc`
 - `model.py`: Contain all the important methods and functions in this project
 - `main.py`: XGBDTI quick start
 - `tuning_xgboost.py`: Greedy grid search for XGBoost hyperparameters
 - `totalPipeline.py`: Go through all the process for XGBDTI
 
 #### `Data/` directory
-../Data/
+`../Data/
 ├── InteractionData
 │   ├── disease.txt
 │   ├── drug.txt
@@ -64,7 +64,7 @@ As for more hyperparameters in XGBoost model, you can modify them in the `src/mo
 ├── Y.txt
 ├── Y10.txt
 ├── drug_dict_map.txt
-└── protein_dict_map.txt
+└── protein_dict_map.txt`
 
 
 This repository contains my coursework of Computational biological programming language.
