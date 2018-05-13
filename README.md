@@ -25,19 +25,19 @@ As for more hyperparameters in XGBoost model, you can modify them in the `src/mo
 
 ## Code & Data
 ### `src/` directory
-`.
-├── Construct_DataSet.py
-├── Model.py
-├── README.md
-├── gridsearch_grid_0_.png
-├── gridsearch_grid_2_.png
-├── gridsearch_grid_3_.png
-├── main.py
-├── test.py
-├── test.pyc
-├── totalPipeline.py
-├── tuning_xgboost.py
-└── tuning_xgboost.pyc`
+`.\n
+├── Construct_DataSet.py\n
+├── Model.py\n
+├── README.md\n
+├── gridsearch_grid_0_.png\n
+├── gridsearch_grid_2_.png\n
+├── gridsearch_grid_3_.png\n
+├── main.py\n
+├── test.py\n
+├── test.pyc\n
+├── totalPipeline.py\n
+├── tuning_xgboost.py\n
+└── tuning_xgboost.pyc\n`
 - `model.py`: Contain all the important methods and functions in this project
 - `main.py`: XGBDTI quick start
 - `tuning_xgboost.py`: Greedy grid search for XGBoost hyperparameters
