@@ -25,7 +25,7 @@ As for more hyperparameters in XGBoost model, you can modify them in the `src/mo
 
 ## Code & Data
 ### `src/` directory
-`.\n
+.\n
 ├── Construct_DataSet.py\n
 ├── Model.py\n
 ├── README.md\n
@@ -37,7 +37,7 @@ As for more hyperparameters in XGBoost model, you can modify them in the `src/mo
 ├── test.pyc\n
 ├── totalPipeline.py\n
 ├── tuning_xgboost.py\n
-└── tuning_xgboost.pyc\n`
+└── tuning_xgboost.pyc\n
 - `model.py`: Contain all the important methods and functions in this project
 - `main.py`: XGBDTI quick start
 - `tuning_xgboost.py`: Greedy grid search for XGBoost hyperparameters
