@@ -58,17 +58,34 @@ As for more hyperparameters in XGBoost model, you can modify them in the `src/mo
 └── protein_dict_map.txt
 ```
 ### `DataSet/` directory
-pre-trained data set. 
+pre-trained data set.   
 The integer denotes the ratio of negative to positive.
 ### `feature/` directory
-pre-trained vector representations for drugs and proteins.
+pre-trained vector representations for drugs and proteins.  
 The integer denotes the dimension of the feature vectors.
-### `DataSet` directory
-Beforehand data set for XGBoost model.
 ### `network/` directory
 pre-computed similarity matrices.
 ### `whole/` directory
-This directory stores the data and program for test on the whole drug-target interaction network. And the drugs(or proteins) with no interaction was moved.
-Due to time pressure, I did not add comments. So the script in this folder is a bit confusing.
+This directory stores the data and program for test on the whole drug-target interaction network. And the drugs(or proteins) with no interaction was moved.  
+Due to time pressure, I did not add comments. So the script in this folder is a bit confusing.  
+```
+.
+├── ConstructModel.py
+├── big.model
+├── constructData.py
+├── drug50Refined.txt
+├── mat_p_d_Refined.txt
+├── predict.py
+├── protein200Refined.txt
+└── totalX.txt
+```
+- `constructData.py` construct data set
+- `ConstructModel.py` training model
+- `predict.py` make predictions
+- `big.model` pre-trained model file
+- `mat_p_d_Refined.txt` protein-drug interaction matrix remove all-zero lines and columns.
+- `drug50Refined.txt` drug features removing non-interaction items
+- `protein200Refined.txt` protein features removing non-interaction items.
+- `totalX.txt`  combined data using Cartesian product
 ### `supplement/` directory
 
