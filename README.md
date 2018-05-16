@@ -45,6 +45,12 @@ As for more hyperparameters in XGBoost model, you can modify them in the `src/mo
 │   ├── drug.txt
 │   ├── mat_drug_disease.txt
 │   ├── mat_drug_drug.txt
+│   ├── mat_drug_protein.txt
+│   ├── mat_drug_protein_disease.txt
+│   ├── mat_drug_protein_drug.txt
+│   ├── mat_drug_protein_homo_protein_drug.txt
+│   ├── mat_drug_protein_sideeffect.txt
+│   ├── mat_drug_protein_unique.txt
 │   ├── mat_drug_se.txt
 │   ├── mat_protein_disease.txt
 │   ├── mat_protein_drug.txt
@@ -57,6 +63,15 @@ As for more hyperparameters in XGBoost model, you can modify them in the `src/mo
 ├── drug_dict_map.txt
 └── protein_dict_map.txt
 ```
+- `Similarity_Matrix_Drugs.txt` : Drug & compound similarity scores based on chemical structures of drugs (\[0,708) are drugs, the rest are compounds).
+- `Similarity_Matrix_Proteins.txt` : Protein similarity scores based on primary sequences of proteins.
+- `mat_drug_protein_homo_protein_drug.txt` : Drug-Protein interaction matrix, in which DTIs with similar drugs (i.e., drug chemical structure similarities > 0.6) or similar proteins (i.e., protein sequence similarities > 40%) were removed.
+- `mat_drug_protein_drug.txt`: Drug-Protein interaction matrix, in which DTIs with drugs sharing similar drug interactions (i.e., Jaccard similarities > 0.6) were removed.
+- `mat_drug_protein_sideeffect.txt`: Drug-Protein interaction matrix, in which DTIs with drugs sharing similar side effects (i.e., Jaccard similarities > 0.6) were removed.
+- `mat_drug_protein_disease.txt`: Drug-Protein interaction matrix, in which DTIs with drugs or proteins sharing similar diseases (i.e., Jaccard similarities > 0.6) were removed.
+- `mat_drug_protein_unique`: Drug-Protein interaction matrix, in which known unique and non-unique DTIs were labelled as 3 and 1, respectively, the corresponding unknown ones were labelled as 2 and 0.  
+The above files are used to test the robustness of the model (see https://github.com/FangpingWan/NeoDTI). In addition to them, other files are provided by the project.
+
 ### `DataSet/` directory
 pre-trained data set.   
 The integer denotes the ratio of negative to positive.
