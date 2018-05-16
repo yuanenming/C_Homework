@@ -16,37 +16,30 @@ You can just run <code>python2 main.py</code> to reproduce the cross validation 
 
 ## Tutorial
 Of course, you can go through all the process by run <code>python2 totalPipeline.py</code> Options are:
-`-d`: drug network list, seperated by comma, without suffix.
-`-p`: protein network list, seperated by comma, without suffix.
-`-dm`: drug feature vector dimensions
-`-pm`: protein feature vector dimensions
-`-r`: negtive positive ratio
+- `-d`: drug network list, seperated by comma, without suffix.
+- `-p`: protein network list, seperated by comma, without suffix.
+- `-dm`: drug feature vector dimensions
+- `-pm`: protein feature vector dimensions
+- `-r`: negtive positive ratio
 As for more hyperparameters in XGBoost model, you can modify them in the `src/model.py`
 
 ## Code & Data
 ### `src/` directory
 ```
-.\n
-├── Construct_DataSet.py\n
-├── Model.py\n
-├── README.md\n
-├── gridsearch_grid_0_.png\n
-├── gridsearch_grid_2_.png\n
-├── gridsearch_grid_3_.png\n
-├── main.py\n
-├── test.py\n
-├── test.pyc\n
-├── totalPipeline.py\n
-├── tuning_xgboost.py\n
-└── tuning_xgboost.pyc\n
+.
+├── main.py
+├── utils.py
+├── totalPipeline.py
+└── tuning_xgboost.py
 ```
-- `model.py`: Contain all the important methods and functions in this project
+- `utils.py`: Contain all the important methods and functions in this project
 - `main.py`: XGBDTI quick start
 - `tuning_xgboost.py`: Greedy grid search for XGBoost hyperparameters
 - `totalPipeline.py`: Go through all the process for XGBDTI
 
 #### `Data/` directory
-`../Data/
+```
+../Data/
 ├── InteractionData
 │   ├── disease.txt
 │   ├── drug.txt
@@ -61,16 +54,21 @@ As for more hyperparameters in XGBoost model, you can modify them in the `src/mo
 ├── SimilarityData
 │   ├── Similarity_Matrix_Drugs.txt
 │   └── Similarity_Matrix_Proteins.txt
-├── X.txt
-├── X10.txt
-├── Y.txt
-├── Y10.txt
 ├── drug_dict_map.txt
-└── protein_dict_map.txt`
-
-
-This repository contains my coursework of Computational biological programming language.
-
-Author: yuanenming
-All rights reserved.
+└── protein_dict_map.txt
+```
+#### `DataSet/` directory
+pre-trained data set. 
+The integer denotes the ratio of negative to positive.
+#### `feature/` directory
+pre-trained vector representations for drugs and proteins.
+The integer denotes the dimension of the feature vectors.
+#### `DataSet` directory
+Beforehand data set for XGBoost model.
+#### `network/` directory
+pre-computed similarity matrices.
+#### `whole/` directory
+This directory stores the data and program for test on the whole drug-target interaction network. And the drugs(or proteins) with no interaction was moved.
+Due to time pressure, I did not add comments. So the script in this folder is a bit confusing.
+#### `supplement/` directory
 
