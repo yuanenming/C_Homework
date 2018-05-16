@@ -70,6 +70,8 @@ As for more hyperparameters in XGBoost model, you can modify them in the `src/mo
 - `mat_drug_protein_sideeffect.txt`: Drug-Protein interaction matrix, in which DTIs with drugs sharing similar side effects (i.e., Jaccard similarities > 0.6) were removed.
 - `mat_drug_protein_disease.txt`: Drug-Protein interaction matrix, in which DTIs with drugs or proteins sharing similar diseases (i.e., Jaccard similarities > 0.6) were removed.
 - `mat_drug_protein_unique`: Drug-Protein interaction matrix, in which known unique and non-unique DTIs were labelled as 3 and 1, respectively, the corresponding unknown ones were labelled as 2 and 0.  
+
+
 The above files are used to test the robustness of the model (see https://github.com/FangpingWan/NeoDTI). In addition to them, other files are provided by the project.
 
 ### `DataSet/` directory
