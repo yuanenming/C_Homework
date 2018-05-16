@@ -12,7 +12,7 @@ The dependent packages are as following. They are easy to download using `pip` e
 
 ## Quick Start
 You can just run <code>python2 main.py</code> to reproduce the cross validation results of XGBDTI. Options are:
-`-r`: negtive positive ratio, one or ten
+- `-r`: negtive positive ratio, one or ten
 
 ## Tutorial
 Of course, you can go through all the process by run <code>python2 totalPipeline.py</code> Options are:
@@ -37,7 +37,7 @@ As for more hyperparameters in XGBoost model, you can modify them in the `src/mo
 - `tuning_xgboost.py`: Greedy grid search for XGBoost hyperparameters
 - `totalPipeline.py`: Go through all the process for XGBDTI
 
-#### `Data/` directory
+### `Data/` directory
 ```
 ../Data/
 ├── InteractionData
@@ -57,18 +57,18 @@ As for more hyperparameters in XGBoost model, you can modify them in the `src/mo
 ├── drug_dict_map.txt
 └── protein_dict_map.txt
 ```
-#### `DataSet/` directory
+### `DataSet/` directory
 pre-trained data set. 
 The integer denotes the ratio of negative to positive.
-#### `feature/` directory
+### `feature/` directory
 pre-trained vector representations for drugs and proteins.
 The integer denotes the dimension of the feature vectors.
-#### `DataSet` directory
+### `DataSet` directory
 Beforehand data set for XGBoost model.
-#### `network/` directory
+### `network/` directory
 pre-computed similarity matrices.
-#### `whole/` directory
+### `whole/` directory
 This directory stores the data and program for test on the whole drug-target interaction network. And the drugs(or proteins) with no interaction was moved.
 Due to time pressure, I did not add comments. So the script in this folder is a bit confusing.
-#### `supplement/` directory
+### `supplement/` directory
 
